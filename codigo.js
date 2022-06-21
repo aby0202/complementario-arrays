@@ -1,22 +1,22 @@
 //calculadora para entregable 1
 
 function suma(num1, num2) {
-	let resultado = num1 + num2;
+	let resultado = parseInt(num1) + parseInt(num2);
 	return resultado;
 }
 
 function resta(num1, num2) {
-	let resultado = num1 - num2;
+	let resultado = parseInt(num1) - parseInt(num2);
 	return resultado;
 }
 
 function multiplicacion(num1, num2) {
-	let resultado = num1 * num2;
+	let resultado = parseInt(num1) * parseInt(num2);
 	return resultado;
 }
 
 function division(num1, num2) {
-	let resultado = num1 / num2;
+	let resultado = parseInt(num1) / parseInt(num2);
 	return resultado;
 }
 
@@ -29,9 +29,9 @@ saludar()
 
 function preguntar() {
 	let pregunta = prompt("¿Queres realizar una operacion? \n 1- si \n 2- no")
-	while (pregunta !== "no") {
+	while (pregunta == "si") {
 		alert("¿Que operación deseas realizar?");
-		let operacion = prompt("1: suma,  2: resta,  3: división,  4: multiplicación, 5:salir");
+		let operacion = prompt(`1: suma,  2: resta,  3: división,  4: multiplicación, 5: salir`);
 
 		if (operacion == 1) {
 			let numero1 = prompt("primer número para sumar");
@@ -53,7 +53,7 @@ function preguntar() {
 			let numero2 = prompt("segundo número para multiplicar");
 			resultado = multiplicacion(numero1, numero2);
 			alert(`tu resultado es ${resultado}`);
-		}else if (operacion ==salir){
+		}else if (operacion == 5){
 			break;
 		} else {
 			alert("no se ha encontrado la operación")
